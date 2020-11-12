@@ -1,0 +1,57 @@
+<a id="toc"></a>
+<hr />
+<h2>Pipes(Tuberías)</h2>
+<a href="#happy-birthday1">Feliz cumpleaños v1</a><br />
+<a href="#birthday-date-pipe">Cumpleaños DatePipe</a><br />
+<a href="#happy-birthday2">Feliz cumpleaños v2</a><br />
+<a href="#birthday-pipe-chaining">Cumpleaños Pipe Chaining</a><br />
+<a href="#power-booster">Potenciador de energía</a><br />
+<a href="#power-boost-calc"
+  >Calculadora de aumento de potencia, tubo a medida con params</a
+><br />
+<a href="#hero-message">Async Hero Message y AsyncPipe</a><br />
+<a href="#hero-list">Lista de héroes con cacheo FetchJsonPipe</a><br />
+
+<hr />
+<a id="happy-birthday1"></a>
+<h2>Fiesta de Heroe v1</h2>
+<app-hero-birthday></app-hero-birthday>
+
+<hr />
+<a id="birthday-date-pipe"></a>
+<h2>Cumpleaños DatePipe</h2>
+<p>El nacimiento de Sam es {{ birthday | date }}</p>
+
+<p>El nacimiento de Sam es {{ birthday | date: "MM/dd/yy" }}</p>
+
+<hr />
+<a id="happy-birthday2"></a>
+<h2>Fiesta de Heroe v2</h2>
+<app-hero-birthday2></app-hero-birthday2>
+
+<hr />
+<a id="birthday-pipe-chaining"></a>
+<h2>Cumpleaños y Encadenamiento de tuberías</h2>
+<p>
+  El cumpleaños de Sam encadenado es
+  {{ birthday | date | uppercase }}
+</p>
+
+<p>
+  El cumpleaños de Sam encadenado es
+  {{ birthday | date: "fullDate" | uppercase }}
+</p>
+
+<hr />
+<a id="power-booster"></a>
+<app-power-booster></app-power-booster>
+
+<hr />
+<a id="power-boost-calc"></a>
+<app-power-boost-calculator>cargando</app-power-boost-calculator>
+
+<hr />
+<a id="hero-list"></a>
+<app-hero-list></app-hero-list>
+
+<div style="margin-top: 12em"></div>

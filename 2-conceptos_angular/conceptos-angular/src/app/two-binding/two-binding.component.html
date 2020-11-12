@@ -1,0 +1,12 @@
+<hr />
+<h2 id="two-way">Two-way Binding</h2>
+<div id="two-way-1">
+  <app-sizer [(size)]="fontSizePx"></app-sizer>
+  <div [style.font-size.px]="fontSizePx">Ajustar Texto</div>
+  <label>FontSize (px): <input [(ngModel)]="fontSizePx" /></label>
+</div>
+<br />
+<div id="two-way-2">
+  <h2>Two-Way Binding</h2>
+  <app-sizer [size]="fontSizePx" (sizeChange)="fontSizePx = $event"></app-sizer>
+</div>

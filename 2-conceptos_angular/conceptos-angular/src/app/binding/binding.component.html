@@ -1,0 +1,65 @@
+<hr />
+<div>
+  <h2>Sintaxis del Binding(Vinculación)</h2>
+  <hr />
+
+  <div>
+    <h3>Botón deshabilitado estado obligado a la propiedad isUnchange</h3>
+    <button [disabled]="isUnchanged">Guardar</button>
+  </div>
+
+  <hr />
+
+  <div (keyup)="(0)">
+    <h2>Atributos HTML y propiedades DOM</h2>
+    <p>
+      1. Utilice el inspector para ver el atributo HTML y los valores de la
+      propiedad DOM. Haga clic en los botones para registrar los valores en la
+      consola.
+    </p>
+
+    <label>
+      Atributo HTML Inicializado para "Sam":
+      <input type="text" value="Sam" #bindingInput />
+    </label>
+    <div>
+      <button (click)="getHTMLAttributeValue()">
+        Obtener el valor del atributo HTML
+      </button>
+      No cambiará.
+    </div>
+
+    <div>
+      <button (click)="getDOMPropertyValue()">
+        Obtener el valor de la propiedad DOM
+      </button>
+      Cambiable. Angular funciona con estos.
+    </div>
+
+    <p>
+      2. Cambie el nombre en la entrada y haga clic en los botones de nuevo.
+    </p>
+  </div>
+
+  <hr />
+  <div>
+    <h3>Propiedad Disabled vs atributo</h3>
+    <p>
+      Use el inspector para ver el funcionamiento del Botón de Prueba y su
+      propiedad desactivada.
+    </p>
+    <div>
+      <button id="testButton" (click)="working()">Botón de Prueba</button>
+    </div>
+    <div>
+      <button (click)="toggleDisabled()">
+        Cambiar la propiedad desactivada por el botón de prueba
+      </button>
+    </div>
+    <div>
+      <button [style.color]="isUnchanged ? 'red' : 'green'">
+        Cambiar color
+      </button>
+    </div>
+  </div>
+</div>

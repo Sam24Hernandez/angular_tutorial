@@ -1,0 +1,60 @@
+<hr />
+<h2>Atributos, clases y vinculos de estilo</h2>
+<h3>Atributo vinculante</h3>
+<table border="1">
+  <!-- expresion calcula colspan=2-->
+  <tr>
+    <td [attr.colspan]="1 + 1">Uno-Dos</td>
+  </tr>
+  <!-- ERROR: There is no `colspan` property to set!
+    <tr><td colspan="{{1 + 1}}">Three-Four</td></tr>
+  -->
+  <!-- Noten que la propiedad de los ColSpan es un caso de camello... -->
+  <tr>
+    <td [colSpan]="1 + 1">Tres-Cuatro</td>
+  </tr>
+
+  <tr>
+    <td>Cinco</td>
+    <td>Seis</td>
+  </tr>
+</table>
+
+<div>
+  <!-- crear y establecer un atributo de aria para la tecnología de asistencia -->
+  <button [attr.aria-label]="actionName">{{ actionName }}</button>
+</div>
+
+<hr />
+
+<h2>Precedencia de estilo</h2>
+
+<h3>Especificidad básica</h3>
+
+<!-- The `class.special` binding overrides any value for the `special` class in `classExpression`.  -->
+<div [class.especial]="isSpecial" [class]="classExpression">Algo de texto.</div>
+
+<!-- The `style.color` binding overrides any value for the `color` property in `styleExpression`.  -->
+<div [style.color]="color" [style]="styleExpression">Algo de texto.</div>
+
+<h3>Especificidad de la fuente</h3>
+
+<!-- The `class.special` template binding overrides any host binding to the `special` class set by `dirWithClassBinding` or `comp-with-host-binding`.-->
+<comp-with-host-binding [class.especial]="isSpecial" dirWithClassBinding
+  >Algo de texto.</comp-with-host-binding
+>
+
+<!-- The `style.color` template binding overrides any host binding to the `color` property set by `dirWithStyleBinding` or `comp-with-host-binding`. -->
+<comp-with-host-binding [style.color]="color" dirWithStyleBinding
+  >Algo de texto.</comp-with-host-binding
+>
+
+<h3>Dinámico vs estático</h3>
+
+<!-- If `classExpression` has a value for the `special` class, this value overrides the `class="special"` below -->
+<div class="special" [class]="classExpression">Algo de texto.</div>
+
+<!-- If `styleExpression` has a value for the `color` property, this value overrides the `style="color: blue"` below -->
+<div style="color: blue" [style]="styleExpression">Algo de texto.</div>
+
+<comp-with-host-binding dirWithHostBinding></comp-with-host-binding>

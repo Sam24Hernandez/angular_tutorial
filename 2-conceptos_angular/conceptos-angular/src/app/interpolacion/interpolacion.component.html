@@ -1,0 +1,64 @@
+<div>
+  <hr />
+  <div>
+    <h2>Interpolación</h2>
+    <!--
+      El texto entre las llaves es a menudo el nombre de una propiedad del componente.
+      Angular reemplaza ese nombre con el valor de la cadena de la correspondiente propiedad del componente.
+    -->
+    <h3>Cliente default: {{ currentCustomer }}</h3>
+
+    <!--
+      En el siguiente ejemplo, Angular evalúa las propiedades del title y del itemImageUrl y rellena los espacios en blanco,
+      mostrando primero algún texto del título y luego una imagen.
+    -->
+    <p>{{ title }}</p>
+    <div>
+      <img src="{{ itemImageUrl }}" alt="Imagen" />
+    </div>
+
+    <!--
+      Más generalmente, el texto entre los corchetes es una expresión de plantilla que Angular evalúa primero y luego convierte en una cadena.
+      La siguiente interpolación ilustra el punto añadiendo dos números:
+    -->
+    <h3>Evaluar las expresiones de la plantilla</h3>
+    <h4>Evaluación simple (a una cadena):</h4>
+    <!-- "La suma de 1 + 1 es 2" -->
+    <p>La suma de 1 + 1 es {{ 1 + 1 }}.</p>
+
+    <!--
+      La expresión puede invocar métodos del componente anfitrión como getVal() en el siguiente ejemplo:
+    -->
+    <h4>Evalúa usando un método (también evalúa a una cadena):</h4>
+    <!-- "La suma de 1 + 1 no es 4" -->
+    <p>La suma de 1 + 1 no es {{ 1 + 1 + getVal() }}.</p>
+  </div>
+  <hr />
+  <h2>Contexto de la expresión</h2>
+
+  <div>
+    <h3>Contexto de los componentes, propiedades de app.component.ts:</h3>
+    <h4>{{ recommended }}</h4>
+    <img [src]="itemImageUrl2" alt="Imagen" />
+  </div>
+
+  <div>
+    <h4>
+      Contexto de la plantilla, variables de entrada de la plantilla (dejar al
+      cliente):
+    </h4>
+    <ul>
+      <li *ngFor="let customer of customers">{{ customer.name }}</li>
+    </ul>
+  </div>
+
+  <div (keyup)="(0)">
+    <h4>
+      Contexto de la plantilla: variables de referencia de la plantilla
+      (#customerInput):
+    </h4>
+    <label
+      >Teclea algo: <input #customerInput /> {{ customerInput.value }}
+    </label>
+  </div>
+</div>
