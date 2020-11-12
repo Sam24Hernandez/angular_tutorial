@@ -1,0 +1,12 @@
+<h1 class="title">Angular Built-In Feautures</h1>
+<nav>
+  <a routerLink="/crisis-center" routerLinkActive="active">Centro de Crisis</a>
+  <a routerLink="/superheroes" routerLinkActive="active">Heróes</a>
+  <a routerLink="/admin" routerLinkActive="active">Admin</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a [routerLink]="[{ outlets: { popup: ['compose'] } }]">Contacto</a>
+</nav>
+<div [@routeAnimation]="getAnimationData(routerOutlet)">
+  <router-outlet #routerOutlet="outlet"></router-outlet>
+</div>
+<router-outlet name="popup"></router-outlet>
