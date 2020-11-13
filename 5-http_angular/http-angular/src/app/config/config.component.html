@@ -1,0 +1,18 @@
+<h3>Obtener la configuración desde el archivo JSON</h3>
+<div>
+  <button (click)="clear(); showConfig()">obtener</button>
+  <button (click)="clear(); showConfigResponse()">getResponse</button>
+  <button (click)="clear()">vacíar</button>
+  <button (click)="clear(); makeError()">error</button>
+  <span *ngIf="config">
+    <p>La URL de la API de Héroes es "{{ config.heroesUrl }}"</p>
+    <p>La URL del archivo de texto es "{{ config.textfile }}"</p>
+    <div *ngIf="headers">
+      Respuesta de los headers:
+      <ul>
+        <li *ngFor="let header of headers">{{ header }}</li>
+      </ul>
+    </div>
+  </span>
+</div>
+<p *ngIf="error" class="error">{{ error | json }}</p>

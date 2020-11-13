@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 2em;
+}
+
+body,
+input[text],
+button {
+  color: #333;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+h1 {
+  color: #369;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 250%;
+}
+
+h2,
+h3 {
+  color: #444;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: lighter;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #aaa;
+  cursor: auto;
+}
