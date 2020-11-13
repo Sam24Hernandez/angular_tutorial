@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+.content {
+  text-align: center;
+  padding: 10vh 15vw;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+}
+
+.full {
+  display: block;
+}
+
+.xs {
+  margin-right: 15px;
+  width: 15%;
+}
+
+.sm {
+  width: 25%;
+}
+
+body {
+  margin: 0;
+}

@@ -1,0 +1,39 @@
+<form [formGroup]="myForm">
+  Valor: {{ myForm.value | json }}
+  <hr />
+
+  <div class="full">
+    <input type="email" placeholder="Email" formControlName="email" />
+  </div>
+
+  <h4>Cell Phone</h4>
+  <div formGroupName="cellPhone">
+    <div class="xs">
+      <input type="tel" placeholder="Área" formControlName="area" />
+    </div>
+
+    <div class="xs">
+      <input type="tel" placeholder="Prefijo" formControlName="prefix" />
+    </div>
+
+    <div class="xs">
+      <input type="tel" placeholder="Línea" formControlName="line" />
+    </div>
+  </div>
+
+  <h4>Home Phone</h4>
+
+  <div formGroupName="homePhone">
+    <div class="xs">
+      <input type="tel" placeholder="Área" formControlName="area" />
+    </div>
+
+    <div class="xs">
+      <input type="tel" placeholder="Prefijo" formControlName="prefix" />
+    </div>
+
+    <div class="xs">
+      <input type="tel" placeholder="Línea" formControlName="line" />
+    </div>
+  </div>
+</form>
