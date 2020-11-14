@@ -1,0 +1,10 @@
+<nav>
+  <button (click)="toggleAnimations()">Cambiar Animaciones</button>
+  <button (click)="toggle()">Cambiar Abrir/Cerrar</button>
+</nav>
+<div [@.disabled]="isDisabled">
+  <div [@childAnimation]="isOpen ? 'abierta' : 'cerrada'"
+    class="open-close-container">
+    <p>La caja está ahora {{ isOpen ? 'Abierta' : 'Cerrada' }}!</p>
+  </div>
+</div>

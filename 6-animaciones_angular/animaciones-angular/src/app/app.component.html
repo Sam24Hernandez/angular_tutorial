@@ -1,0 +1,19 @@
+<h1>Animaciones en Angular</h1>
+
+Activar Todas las Animaciones <input type="checkbox" [checked]="!animationsDisabled" (click)="toggleAnimations()">
+
+<nav>
+  <a id="home" routerLink="/home" routerLinkActive="active">Home</a>
+  <a id="about" routerLink="/about" routerLinkActive="active">Acerca de</a>
+  <a id="open-close" routerLink="/open-close" routerLinkActive="active">Abrir/Cerrar</a>
+  <a id="status" routerLink="/status" routerLinkActive="active">Status Slider</a>
+  <a id="toggle" routerLink="/toggle" routerLinkActive="active">Cambiar Animaciones</a>
+  <a id="auto" routerLink="/auto" routerLinkActive="active">Cálculo Automático</a>
+  <a id="heroes" routerLink="/heroes" routerLinkActive="active">Filtro/Tambalearse</a>
+  <a id="hero-groups" routerLink="/hero-groups" routerLinkActive="active">Grupo de Heróes</a>
+  <a id="insert-remove" routerLink="/insert-remove" routerLinkActive="active">Insertar/Remover</a>
+</nav>
+
+<div [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

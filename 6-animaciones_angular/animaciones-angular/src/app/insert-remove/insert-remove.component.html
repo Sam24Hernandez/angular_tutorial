@@ -1,0 +1,9 @@
+<h2>Insertar/Remover</h2>
+
+<nav>
+    <button (click)="toggle()">Alternar Insertar/Remover</button>
+</nav>
+
+<div @myInsertRemoveTrigger *ngIf="isShown" class="insert-remove-container">
+  <p>La caja se inserta</p>
+</div>

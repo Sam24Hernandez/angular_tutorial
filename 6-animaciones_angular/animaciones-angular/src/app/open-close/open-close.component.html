@@ -1,0 +1,10 @@
+<nav>
+  <button (click)="toggle()">Cambiar Abrir/Cerrar</button>
+</nav>
+
+<div [@openClose]="isOpen ? 'open' : 'closed'"
+  (@openClose.start)="onAnimationEvent($event)"
+  (@openClose.done)="onAnimationEvent($event)"
+  class="open-close-container">  
+  <p>La caja está ahora {{ isOpen ? 'Abierta' : 'Cerrada' }}!</p>
+</div>
