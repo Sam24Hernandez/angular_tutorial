@@ -1,0 +1,10 @@
+.error-body {
+  padding-top: 5%;
+}
+
+.error-body h1 {
+  font-size: 60px;
+  font-weight: 900;
+  text-shadow: 4px 4px 0 #fff, 6px 6px 0 #263238;
+  line-height: 60px;
+}
