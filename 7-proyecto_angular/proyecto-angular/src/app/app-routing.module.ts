@@ -8,6 +8,11 @@ import { CrearArticuloComponent } from './pages/crear-articulo/crear-articulo.co
 import { HomeComponent } from './pages/home/home.component';
 
 const appRoutes: Routes = [
+  {
+    path: 'articulos',
+    loadChildren: () => import('./articles/articles.module').then(m => m.ArticlesModule),
+  },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'crear-articulo', component: CrearArticuloComponent },
   { path: 'blog', component: BlogComponent },

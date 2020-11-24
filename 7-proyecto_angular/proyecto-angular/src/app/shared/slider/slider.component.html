@@ -1,8 +1,21 @@
-<div id="slider" class="slider-lg">
-  <h1 class="title-lg">Angular</h1>
-  <p class="description-lg">One framework. Mobile & desktop.</p>
-  <a href="#" target="_blank">Comienza</a>
-  <a href="https://angular.io/" class="tutorial_link" target="_blank">
+<div
+  id="slider"
+  [ngClass]="{
+    'slider-lg': !size || size === 'lg',
+    'slider-sm': size === 'sm'
+  }"
+>
+  <h1 class="title-lg">{{ name }}</h1>
+  <p class="description-lg" *ngIf="!size || size === 'lg'">
+    One framework. Mobile & desktop.
+  </p>
+  <a routerLink="/blog" *ngIf="!size || size === 'lg'">Comienza</a>
+  <a
+    href="https://angular.io/"
+    class="tutorial_link"
+    target="_blank"
+    *ngIf="!size || size === 'lg'"
+  >
     Visita su página
     <svg
       height="12"
