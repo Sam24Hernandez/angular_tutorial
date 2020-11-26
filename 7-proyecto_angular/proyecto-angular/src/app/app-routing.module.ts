@@ -11,6 +11,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 /** Articulo */
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'blog', component: BlogComponent },
   { path: 'crear-articulo', component: CrearArticuloComponent },
   { path: 'articulo/:id', component: ArticleDetailComponent },
+  {path: 'buscador', component: SearchComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: '**', component: PageNotFoundComponent }
 ];

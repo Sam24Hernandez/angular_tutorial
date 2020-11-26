@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 
 import { Article } from 'src/app/models/article.model';
@@ -16,6 +16,7 @@ export class ArticleDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private articleService: ArticleService,
     private location: Location
   ) { }
@@ -28,6 +29,18 @@ export class ArticleDetailComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id');
     this.articleService.getArticle(id)
       .subscribe(article => this.article = article);
+  }
+
+  delete(article: Article): void {
+    this.articleService.deleteArticle(article).subscribe(
+      response => {
+        this.router.navigate(['/home']);
+      },
+      error => {
+        console.log(error);
+        this.router.navigate(['/home']);
+      }
+    );
   }
 
   goBack(): void {

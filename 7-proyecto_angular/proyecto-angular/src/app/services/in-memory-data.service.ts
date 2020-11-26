@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
         title: 'Primer titulo',
         content: 'Primer contenido',
         name: 'Sam Hernandez',
-        date: new Date().getDate(),
+        date: new Date(),
         image:
           'https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8',
       },
@@ -23,7 +23,7 @@ export class InMemoryDataService implements InMemoryDbService {
         title: 'Segundo titulo',
         content: 'Segundo contenido',
         name: 'Sam Hernandez',
-        date: new Date().getDate(),
+        date: new Date(),
         image:
           'https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8',
       },
@@ -32,7 +32,7 @@ export class InMemoryDataService implements InMemoryDbService {
         title: 'Tercer titulo',
         content: 'Tercer contenido',
         name: 'Sam Hernandez',
-        date: new Date().getDate(),
+        date: new Date(),
         image:
           'https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8',
       },
@@ -41,7 +41,7 @@ export class InMemoryDataService implements InMemoryDbService {
         title: 'Cuarto titulo',
         content: 'Cuarto contenido',
         name: 'Sam Hernandez',
-        date: new Date().getDate(),
+        date: new Date(),
         image:
           'https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8',
       },
@@ -50,7 +50,7 @@ export class InMemoryDataService implements InMemoryDbService {
         title: 'Quinto titulo',
         content: 'Quinto contenido',
         name: 'Sam Hernandez',
-        date: new Date().getDate(),
+        date: new Date(),
         image:
           'https://unhabitatmejor.leroymerlin.es/sites/default/files/styles/header_category/public/2018-10/4%20paisaje%20macedonia.jpg?itok=AELknmF8',
       },

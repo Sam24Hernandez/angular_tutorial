@@ -4,11 +4,12 @@
       <div class="image-wrap">
         <img src="{{ article.image }}" alt="Paisaje" />
       </div>
-      <h2 class="subheader">{{ article.title | uppercase }}</h2>
-      <div><span>id: </span>{{ article.id }}</div>
-      <span class="date-article">
-        Por {{ article.name }} | {{ article.date }}
-      </span>
+      <h2 class="subheader">
+        #{{ article.id }} {{ article.title | uppercase }}
+      </h2>
+      <small class="date-article">
+        Por {{ article.name }} | {{ article.date | amLocale: "es" | amTimeAgo }}
+      </small>
       <p>{{ article.content }}</p>
       <button
         class="btn btn-outline-primary btn-rounded mr-2"
@@ -16,7 +17,12 @@
       >
         volver atrás
       </button>
-      <button class="btn btn-danger btn-rounded mr-2" (click)="goBack()">
+      <button
+        title="Borrar Artículo"
+        (click)="delete(article)"
+        class="btn btn-danger btn-rounded mr-2"
+        (click)="goBack()"
+      >
         borrar
       </button>
       <button class="btn btn-success btn-rounded" (click)="goBack()">
