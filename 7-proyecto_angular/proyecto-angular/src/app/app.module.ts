@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MomentModule } from 'angular2-moment';
+import { AngularFileUploaderModule } from 'angular-file-uploader';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/in-memory-data.service';
@@ -20,7 +21,6 @@ import { SidebarComponent } from './shared/sidebar/sidebar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BlogComponent } from './pages/blog/blog.component';
-import { CrearArticuloComponent } from './pages/crear-articulo/crear-articulo.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ArticlesComponent } from './articles/articles/articles.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
@@ -37,7 +37,6 @@ import { SearchComponent } from './pages/search/search.component';
     /** Componentes del Pages */
     HomeComponent,
     BlogComponent,
-    CrearArticuloComponent,
     ContactoComponent,
     /* 404 */
     PageNotFoundComponent,
@@ -56,7 +55,8 @@ import { SearchComponent } from './pages/search/search.component';
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
     ),
-    MomentModule
+    MomentModule,
+    AngularFileUploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

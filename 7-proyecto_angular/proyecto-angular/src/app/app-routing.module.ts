@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 // import { PagesRoutingModule } from './pages/pages.routing';
 
 import { HomeComponent } from './pages/home/home.component';
-import { CrearArticuloComponent } from './pages/crear-articulo/crear-articulo.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -17,7 +16,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'blog', component: BlogComponent },
-  { path: 'crear-articulo', component: CrearArticuloComponent },
   { path: 'articulo/:id', component: ArticleDetailComponent },
   {path: 'buscador', component: SearchComponent },
   { path: 'contacto', component: ContactoComponent },

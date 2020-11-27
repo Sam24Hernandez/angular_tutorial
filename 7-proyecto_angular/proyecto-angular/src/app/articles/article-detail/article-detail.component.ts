@@ -8,8 +8,7 @@ import { ArticleService } from 'src/app/services/article.service';
 @Component({
   selector: 'app-article-detail',
   templateUrl: './article-detail.component.html',
-  styles: [
-  ]
+  styleUrls: ['./article-detail.component.css']
 })
 export class ArticleDetailComponent implements OnInit {
   article: Article;
@@ -41,6 +40,11 @@ export class ArticleDetailComponent implements OnInit {
         this.router.navigate(['/home']);
       }
     );
+  }
+
+  save(): void {
+    this.articleService.updateArticle(this.article)
+      .subscribe(() => this.goBack());
   }
 
   goBack(): void {

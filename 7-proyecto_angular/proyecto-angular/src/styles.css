@@ -70,6 +70,30 @@ textarea {
   max-height: 300px;
 }
 
+.card-primary:not(.card-outline) > .card-header {
+  background-color: #007bff;
+}
+
+.card-primary:not(.card-outline) > .card-header,
+.card-primary:not(.card-outline) > .card-header a {
+  color: #fff;
+}
+
+.card-title {
+  float: left;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0 !important;
+}
+
+.card-body::after,
+.card-footer::after,
+.card-header::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
 #header {
   height: 120px;
   width: 100%;
@@ -81,6 +105,78 @@ textarea {
 .center {
   width: 75%;
   margin: 0px auto;
+}
+
+/** Contacto */
+
+.form-contact label {
+  font-size: 14px;
+}
+
+.form-contact .form-group {
+  margin-bottom: 30px;
+}
+
+.form-contact .form-control {
+  border: 1px solid #e5e6e9;
+  border-radius: 0px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: transparent;
+}
+
+.form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+.form-contact textarea {
+  border-radius: 0px;
+  height: 100% !important;
+}
+
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.boxed-btn {
+  background: #fff;
+  color: #1976d2;
+  display: inline-block;
+  padding: 18px 44px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  border: 1px solid #1976d2;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.boxed-btn:hover {
+  background: #42a5f5;
+  color: #fff;
+  border: 1px solid #42a5f5;
+}
+
+.boxed-btn:focus {
+  outline: none;
 }
 
 .clearfix {
@@ -480,6 +576,16 @@ textarea {
   }
 }
 
+@media (max-width: 834px) {
+  #logo {
+    width: 32%;
+  }
+
+  #menu {
+    width: 68%;
+  }
+}
+
 @media (max-width: 797px) {
   #logo {
     float: none;
@@ -610,5 +716,9 @@ textarea {
 
   .article-item .description-article {
     font-size: 14px;
+  }
+
+  .subheader {
+    font-size: 1.8em;
   }
 }
