@@ -1,0 +1,35 @@
+<app-slider [name]="'Acerca de'" [size]="'sm'"></app-slider>
+<div class="center">
+  <section id="content">
+    <h2 class="subheader">Crush de Sam Hernández</h2>
+    <!-- listado de chicas -->
+    <label>
+      Nombre de la chica:
+      <input class="form-control" #userName />
+    </label>
+    <button
+      (click)="add(userName.value); userName.value = ''"
+      class="btn btn-success btn-rounded"
+    >
+      añadir
+    </button>
+    <div id="articles">
+      <ul class="users">
+        <li *ngFor="let user of users">
+          <a routerLink="/crush/{{ user.id }}">
+            <span class="badge">{{ user.id }}</span> {{ user.name }}
+          </a>
+          <button
+            class="crush-button delete"
+            (click)="delete(user)"
+            title="eliminar crush :("
+          >
+            x
+          </button>
+        </li>
+      </ul>
+    </div>
+    <app-messages></app-messages>
+  </section>
+  <app-sidebar></app-sidebar>
+</div>

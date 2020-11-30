@@ -1,0 +1,27 @@
+h2 {
+  color: #f13e3e;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-weight: lighter;
+}
+
+body {
+  margin: 2em;
+}
+
+button.clear {
+  font-family: inherit;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button.clear {
+  color: #333;
+  margin-bottom: 12px;
+}

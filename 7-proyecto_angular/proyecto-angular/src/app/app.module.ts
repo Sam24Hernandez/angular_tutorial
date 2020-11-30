@@ -25,6 +25,9 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { ArticlesComponent } from './articles/articles/articles.component';
 import { ArticleDetailComponent } from './articles/article-detail/article-detail.component';
 import { SearchComponent } from './pages/search/search.component';
+import { AcercaComponent } from './pages/acerca/acerca.component';
+import { MessagesComponent } from './pages/messages/messages.component';
+import { CrushDetailComponent } from './pages/crush-detail/crush-detail.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +45,10 @@ import { SearchComponent } from './pages/search/search.component';
     PageNotFoundComponent,
     ArticlesComponent,
     ArticleDetailComponent,
-    SearchComponent
+    SearchComponent,
+    AcercaComponent,
+    MessagesComponent,
+    CrushDetailComponent
   ],
   imports: [
     BrowserModule,

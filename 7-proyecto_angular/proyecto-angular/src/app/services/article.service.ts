@@ -68,13 +68,6 @@ export class ArticleService {
   }
 
   //////////////////// Save Methods ////////////////////
-  /** POST: add a new article to the server */
-  addArticle(article: Article): Observable<Article> {
-    return this.http.post<Article>(this.articlesUrl, article, this.httpOptions).pipe(
-      tap((newArticle: Article) => this.log(`añadido nuevo articulo con id=${newArticle.id}`)),
-      catchError(this.handleError<Article>('addArticle'))
-    );
-  }
 
   /** DELETE: delete the article to the server */
   deleteArticle(article: Article | number): Observable<Article> {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import Swal from 'sweetalert2';
 
 import { Article } from 'src/app/models/article.model';
 import { ArticleService } from 'src/app/services/article.service';
@@ -31,20 +32,47 @@ export class ArticleDetailComponent implements OnInit {
   }
 
   delete(article: Article): void {
-    this.articleService.deleteArticle(article).subscribe(
-      response => {
-        this.router.navigate(['/home']);
-      },
-      error => {
-        console.log(error);
-        this.router.navigate(['/home']);
+    Swal.fire({
+      title: '¿Estás seguro?',
+      text: '¡No podrás revertir esto!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Borrar Definitvamente'
+    })
+    .then((result) => {
+      if (result.isConfirmed) {
+        this.articleService.deleteArticle(article).subscribe(
+          () => {
+            Swal.fire(
+              '¡Borrado!',
+              'El artículo ha sido borrado correctamente.',
+              'success'
+            ),
+            this.router.navigate(['/home']);
+          },
+          error => {
+            console.log(error);
+            this.router.navigate(['/home']);
+          }
+        );
+      } else {
+        Swal.fire('Tranquilo, el artículo está a salvo.');
       }
-    );
+    });
   }
 
   save(): void {
     this.articleService.updateArticle(this.article)
-      .subscribe(() => this.goBack());
+      .subscribe(() => {
+        Swal.fire({
+          title: 'Cambios Guardados',
+          text: 'El artículo se ha editado y guardado correctamente.',
+          icon: 'success'
+        });
+        this.goBack();
+      });
   }
 
   goBack(): void {
