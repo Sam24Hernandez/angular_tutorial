@@ -16,7 +16,7 @@
     <div id="articles">
       <ul class="users">
         <li *ngFor="let user of users">
-          <a routerLink="/crush/{{ user.id }}">
+          <a routerLink="/home/crush/{{ user.id }}">
             <span class="badge">{{ user.id }}</span> {{ user.name }}
           </a>
           <button
