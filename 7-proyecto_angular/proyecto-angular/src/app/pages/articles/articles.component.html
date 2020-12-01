@@ -1,0 +1,82 @@
+<div class="center" *ngIf="article">
+  <section id="content-article">
+    <article class="article-item article-detail">
+      <div class="image-wrap">
+        <img src="{{ article.image }}" alt="Paisaje" />
+      </div>
+      <h2 class="subheader">
+        #{{ article.id }} {{ article.title | uppercase }}
+      </h2>
+      <small class="date-article">
+        Por {{ article.name }} | {{ article.date | amLocale: "es" | amTimeAgo }}
+      </small>
+      <p>{{ article.content }}</p>
+      <hr />
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Modo edición:</h3>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label>
+                  título:
+                  <input
+                    [(ngModel)]="article.title"
+                    class="form-control"
+                    placeholder="titulo"
+                  />
+                </label>
+                <div class="form-group">
+                  <label>
+                    nombre:
+                    <input
+                      [(ngModel)]="article.name"
+                      class="form-control"
+                      placeholder="nombre"
+                    />
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    contenido:
+                    <textarea
+                      [(ngModel)]="article.content"
+                      class="form-control"
+                      placeholder="contenido"
+                    ></textarea>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="input-group-btn">
+        <button
+          class="btn btn-outline-primary btn-rounded mr-2"
+          (click)="goBack()"
+        >
+          volver atrás
+        </button>
+        <button
+          title="Borrar Artículo"
+          (click)="delete(article)"
+          class="btn btn-danger btn-rounded mr-2"
+        >
+          borrar
+        </button>
+        <button class="btn btn-success btn-rounded" (click)="save()">
+          guardar cambios
+        </button>
+      </div>
+
+      <div class="clearfix"></div>
+    </article>
+  </section>
+
+  <app-sidebar></app-sidebar>
+  <div class="clearfix"></div>
+</div>

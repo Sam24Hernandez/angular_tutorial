@@ -1,0 +1,22 @@
+.form-control {
+  width: 56vw !important;
+  height: calc(2.25rem + 2px) !important;
+}
+
+@media (max-width: 797px) {
+  .form-control {
+    width: 90vw !important;
+  }
+}
+
+@media (max-width: 497px) {
+  .form-control {
+    width: 84vw !important;
+  }
+}
+
+@media (max-width: 375px) {
+  .form-control {
+    width: 84vw !important;
+  }
+}
